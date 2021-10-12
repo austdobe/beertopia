@@ -25,7 +25,6 @@ const Home = () => {
 
 	return (
 		<>
-			<div>Home page</div>
 			{/* <SearchBar setSearchTerm={setSearchTerm} /> */}
 			<Grid header={searchTerm ? 'Search Results' : 'Popular Beer'}>
 				{state.results.map((beers) => (
@@ -34,6 +33,8 @@ const Home = () => {
 						clickable
 						image={beers.image_url ? beers.image_url : NoImage}
 						beerId={beers.id}
+						name={beers.name}
+						description={beers.tagline}
 					/>
 				))}
 			</Grid>

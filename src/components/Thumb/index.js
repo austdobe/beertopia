@@ -1,19 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 //styles
-import { Image } from './Thumb.styles';
+import { Image, Wrapper, Text, Title } from './Thumb.styles';
 
-const Thumb = ({ image, movieId, clickable })=>(
-    <div>
-        {clickable ? (
-            <Link to={`/${movieId}`}>
-                <Image src={image} alt='movie-thumb'/>
-            </Link>
-        ):(
-            <Image src={image} alt='movie-thumb'/>
-        )}
-        
-    </div>
-)
+const Thumb = ({ image, beerId, clickable, name, description }) => (
+	<div>
+		{clickable ? (
+			<Wrapper>
+				<Link to={`/${beerId}`}>
+					<Image src={image} alt='beer-thumb' height='200px' width='300px' />
+				</Link>
+				<Title>{name}</Title>
+				<Text>{description}</Text>
+			</Wrapper>
+		) : (
+			<Wrapper>
+				<Image src={image} alt='beer-thumb' />
+				<Title>{name}</Title>
+				<Text>{description}</Text>
+			</Wrapper>
+		)}
+	</div>
+);
 
-export default Thumb
+export default Thumb;
