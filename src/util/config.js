@@ -1,7 +1,7 @@
 //Config for punk api
 //read more at punkapi.com/documentation
 
-const API_URL = 'https://api.punkapi.com/v2/beers?';
+const API_URL = 'https://api.punkapi.com/v2/beers';
 
 //base search results
 const SEARCH_BASE_URL = `${API_URL}`;

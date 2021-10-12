@@ -3,10 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import API from '../util/API';
 
 const initialState = {
-	page: 0,
+	page: 1,
 	results: [],
-	total_pages: 0,
-	total_results: 0,
 };
 
 export const useHomeFetch = () => {
@@ -42,13 +40,13 @@ export const useHomeFetch = () => {
 		fetchBeer(1, searchTerm);
 	}, [searchTerm]);
 
-	//Load More
-	useEffect(() => {
-		if (!isLoadingMore) return;
+	// //Load More
+	// useEffect(() => {
+	// 	if (!isLoadingMore) return;
 
-		fetchBeer(state.page + 1, searchTerm);
-		setIsLoadingMore(false);
-	}, [isLoadingMore, searchTerm, state.page]);
+	// 	fetchBeer(state.page + 1, searchTerm);
+	// 	setIsLoadingMore(false);
+	// }, [isLoadingMore, searchTerm, state.page]);
 
 	return { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore };
 };
