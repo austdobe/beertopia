@@ -1,15 +1,15 @@
 import React from 'react';
 
 //config
-import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from '../config';
+import { POSTER_SIZE } from '../util/config';
 
 //components
-import HeroImage from './HeroImage';
-import Grid from './Grid';
-import Thumb from './Thumb';
-import Spinner from './Spinner';
-import SearchBar from './SearchBar';
-import Button from './Button';
+// import HeroImage from './HeroImage';
+import Grid from '../components/Grid';
+import Thumb from '../components/Thumb';
+// import Spinner from './Spinner';
+// import SearchBar from './SearchBar';
+// import Button from './Button';
 
 //Hook
 import { useHomeFetch } from '../hooks/useHomeFetch';
@@ -25,32 +25,18 @@ const Home = () => {
 
 	return (
 		<>
-			{/* {!searchTerm && state.results[0] ? (
-				<HeroImage
-					image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
-					title={state.results[0].original_title}
-					text={state.results[0].overview}
-				/>
-			) : null} */}
-			<SearchBar setSearchTerm={setSearchTerm} />
-			<Grid header={searchTerm ? 'Search Results' : 'Popular Movies'}>
-				{state.results.map((beer) => (
+			<div>Home page</div>
+			{/* <SearchBar setSearchTerm={setSearchTerm} /> */}
+			<Grid header={searchTerm ? 'Search Results' : 'Popular Beer'}>
+				{state.results.map((beers) => (
 					<Thumb
-						key={beer.id}
+						key={beers.id}
 						clickable
-						image={
-							beer.poster_path
-								? IMAGE_BASE_URL + POSTER_SIZE + beer.poster_path
-								: NoImage
-						}
-						beerId={beer.id}
+						image={beers.image_url ? beers.image_url : NoImage}
+						beerId={beers.id}
 					/>
 				))}
 			</Grid>
-			{loading && <Spinner />}
-			{state.page < state.total_pages && !loading && (
-				<Button text='Load More' callback={() => setIsLoadingMore(true)} />
-			)}
 		</>
 	);
 };

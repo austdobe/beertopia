@@ -1,4 +1,4 @@
-import { SEARCH_BASE_URL } from './config';
+import { SEARCH_BASE_URL, POPULAR_BASE_URL } from '../util/config';
 
 const apiSettings = {
 	fetchBeers: async (searchTerm, page) => {

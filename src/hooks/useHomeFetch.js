@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 //API
-import API from '../API';
+import API from '../util/API';
 
 const initialState = {
 	page: 0,
@@ -23,12 +23,12 @@ export const useHomeFetch = () => {
 			setError(false);
 			setLoading(true);
 
-			const beer = await API.fetchBeer(searchTerm, page);
+			const beers = await API.fetchBeers(searchTerm, page);
+			console.log(beers);
 
 			setState((prev) => ({
 				...beers,
-				results:
-					page > 1 ? [...prev.results, ...beers.results] : [...beers.results],
+				results: page > 1 ? [...prev, ...beers] : [...beers],
 			}));
 		} catch (error) {
 			setError(true);
