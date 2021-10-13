@@ -7,7 +7,7 @@ import { Wrapper, Content } from './BreadCrumb.styles';
 const BreadCrumb = ({ beerTitle }) => (
 	<Wrapper>
 		<Content>
-			<Link to='/'>
+			<Link to='/home'>
 				<span>Home</span>
 			</Link>
 			<span> | </span>

@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+	background-color: var(--darkGrey);
+	background-size: cover 100%;
 	animation: animateBeerInfo 1s;
+	padding: 20px;
 
 	@keyframes animateBeerInfo {
 		from {

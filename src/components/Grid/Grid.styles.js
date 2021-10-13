@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 	padding: 0 10px;
 
 	h1 {
-		color: var(--medGrey);
+		color: var(--black);
 
 		@media screen and (max-width: 768px) {
 			font-size: var(--fontBig);

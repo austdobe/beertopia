@@ -29,7 +29,7 @@ export const useHomeFetch = () => {
 				setState(() => ({
 					...beers,
 					results: [...beers],
-					page: page || 0,
+					page: page,
 				}));
 			}, 500);
 			setLoading(false);

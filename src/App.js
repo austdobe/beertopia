@@ -3,7 +3,8 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 //components
-import Home from './pages/LandingPage';
+import Home from './pages/Home';
+import LandingPage from './pages/LandingPage';
 import Beer from './pages/Beer';
 // import NotFound from './pages/NotFound';
 
@@ -13,7 +14,8 @@ import { GlobalStyle } from './GlobalStyles';
 const App = () => (
 	<Router>
 		<Routes>
-			<Route path='/' element={<Home />} />
+			<Route path='/' element={<LandingPage />} />
+			<Route path='/home' element={<Home />} />
 			<Route path='/:beerId' element={<Beer />} />
 			{/* <Route path='/*' element={<NotFound />} /> */}
 		</Routes>

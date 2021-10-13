@@ -24,7 +24,7 @@ const SearchBar = ({ setSearchTerm }) => {
 				{/* <img src={SearchIcon} alt='search-icon' /> */}
 				<input
 					type='text'
-					placeholder='Search Beer'
+					placeholder='Search Beer Name/Type'
 					onChange={(event) => {
 						setState(event.currentTarget.value);
 					}}
