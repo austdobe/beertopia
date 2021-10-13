@@ -38,6 +38,11 @@ export const Text = styled.div`
 	max-width: fit-content;
 	overflow: hidden;
 
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		padding: 20px 0%;
+	}
+
 	h1 {
 		@media screen and (max-width: 768px) {
 			font-size: var(--fontBig);
@@ -45,6 +50,9 @@ export const Text = styled.div`
 	}
 	p {
 		margin-left: 20px;
+		@media screen and (max-width: 768px) {
+			margin-left: 0;
+		}
 	}
 `;
 export const Image = styled.img`
