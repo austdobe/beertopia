@@ -1,14 +1,11 @@
 import React from 'react';
 
-//config
-import { POSTER_SIZE } from '../util/config';
-
 //components
 // import HeroImage from './HeroImage';
 import Grid from '../components/Grid';
 import Thumb from '../components/Thumb';
 import Spinner from '../components/Spinner';
-// import SearchBar from './SearchBar';
+import SearchBar from '../components/SearchBar';
 import Button from '../components/Button';
 import { About } from '../components/Thumb/Thumb.styles';
 
@@ -40,7 +37,7 @@ const Home = () => {
 
 	return (
 		<>
-			{/* <SearchBar setSearchTerm={setSearchTerm} /> */}
+			<SearchBar setSearchTerm={setSearchTerm} />
 			<Grid header={searchTerm ? 'Search Results' : 'Popular Beer'}>
 				{state.results.map((beers) => (
 					<Thumb

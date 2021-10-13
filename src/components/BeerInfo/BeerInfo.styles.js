@@ -23,11 +23,12 @@ export const Content = styled.div`
 	@media screen and (max-width: 768px) {
 		display: block;
 		max-height: none;
+		text-align: center;
 	}
 `;
 
 export const Text = styled.div`
-	width: 40%;
+	width: 75%;
 	margin: 0 auto;
 	padding: 20px 60px;
 	color: var(--white);
@@ -39,6 +40,9 @@ export const Text = styled.div`
 			font-size: var(--fontBig);
 		}
 	}
+	p {
+		margin-left: 10px;
+	}
 `;
 export const Image = styled.img`
 	width: 100%;
@@ -46,7 +50,7 @@ export const Image = styled.img`
 	max-height: 500px;
 	margin: 10px auto;
 	transition: all 0.3s;
-	/* object-fit: cover; */
+	object-fit: contain;
 	border-radius: 20px;
 	animation: animateImage 0.5s;
 

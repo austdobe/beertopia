@@ -18,12 +18,11 @@ const BeerInfo = ({ beer }) => (
 			/>
 			<Text>
 				<h1> {beer.name} </h1>
+				<h3>Description</h3>
 				<p>{beer.description} </p>
-			</Text>
-			<Text>
-				<h1> Food Pairing </h1>
+				<h3> Food Pairing </h3>
 				{beer.food_pairing.map((food) => (
-					<p>{food}</p>
+					<p> - {food}</p>
 				))}
 			</Text>
 		</Content>

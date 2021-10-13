@@ -14,10 +14,10 @@ const Thumb = ({ image, beerId, name, description, abv, ibu }) => (
 			/>
 			<Title>{name}</Title>
 			<Text>{description}</Text>
-			{/* <About>
+			<About>
 				<Text>ABV: {abv} </Text>
 				<Text>IBU: {ibu}</Text>
-			</About> */}
+			</About>
 		</Wrapper>
 	</Link>
 );
