@@ -19,10 +19,16 @@ export const Content = styled.div`
 		:hover {
 			opacity: 0.8;
 		}
+		@media screen and (max-width: 768px) {
+			font-size: var(--fontSmall);
+		}
 	}
 
 	h2 {
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		color: whitesmoke;
+		@media screen and (max-width: 768px) {
+			font-size: var(--fontSmall);
+		}
 	}
 `;
