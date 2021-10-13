@@ -10,6 +10,7 @@ import Thumb from '../components/Thumb';
 import Spinner from '../components/Spinner';
 // import SearchBar from './SearchBar';
 import Button from '../components/Button';
+import { About } from '../components/Thumb/Thumb.styles';
 
 //Hook
 import { useHomeFetch } from '../hooks/useHomeFetch';
@@ -18,8 +19,15 @@ import { useHomeFetch } from '../hooks/useHomeFetch';
 import NoImage from '../images/no_image.jpg';
 
 const Home = () => {
-	const { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore } =
-		useHomeFetch();
+	const {
+		state,
+		loading,
+		error,
+		searchTerm,
+		setSearchTerm,
+		setIsLoadingMore,
+		setIsLoadingPrev,
+	} = useHomeFetch();
 
 	if (error)
 		return (
@@ -48,9 +56,12 @@ const Home = () => {
 				))}
 			</Grid>
 			{loading && <Spinner />}
-			{/* {state.page < state.total_pages && !loading && ( */}
-			<Button text='Load More' callback={() => setIsLoadingMore(true)} />
-			{/* )} */}
+			{!loading && (
+				<About>
+					<Button text='Previous' callback={() => setIsLoadingPrev(true)} />
+					<Button text='Next' callback={() => setIsLoadingMore(true)} />
+				</About>
+			)}
 		</>
 	);
 };

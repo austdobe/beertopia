@@ -7,8 +7,8 @@ const apiSettings = {
 			: `${POPULAR_BASE_URL}?page=${page}&per_page=24`;
 		return await (await fetch(endpoint)).json();
 	},
-	fetchMovie: async (beerId) => {
-		const endpoint = `${SEARCH_BASE_URL}/ids${beerId}`;
+	fetchBeer: async (beerId) => {
+		const endpoint = `${POPULAR_BASE_URL}/${beerId}`;
 		return await (await fetch(endpoint)).json();
 	},
 };

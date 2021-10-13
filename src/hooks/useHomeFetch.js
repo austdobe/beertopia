@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import API from '../util/API';
 
 const initialState = {
-	page: 1,
+	page: 0,
 	results: [],
 };
 
@@ -13,6 +13,7 @@ export const useHomeFetch = () => {
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(false);
 	const [isLoadingMore, setIsLoadingMore] = useState(false);
+	const [isLoadingPrev, setIsLoadingPrev] = useState(false);
 
 	console.log(state);
 
@@ -24,9 +25,10 @@ export const useHomeFetch = () => {
 			const beers = await API.fetchBeers(searchTerm, page);
 			console.log(beers);
 
-			setState((prev) => ({
+			setState(() => ({
 				...beers,
-				results: page > 1 ? [...prev, ...beers] : [...beers],
+				results: [...beers],
+				page: page || 0,
 			}));
 		} catch (error) {
 			setError(true);
@@ -40,13 +42,29 @@ export const useHomeFetch = () => {
 		fetchBeer(1, searchTerm);
 	}, [searchTerm]);
 
-	// //Load More
-	// useEffect(() => {
-	// 	if (!isLoadingMore) return;
+	//More Beers
+	useEffect(() => {
+		if (!isLoadingMore) return;
 
-	// 	fetchBeer(state.page + 1, searchTerm);
-	// 	setIsLoadingMore(false);
-	// }, [isLoadingMore, searchTerm, state.page]);
+		fetchBeer(state.page + 1, searchTerm);
+		setIsLoadingMore(false);
+		console.log(state.page);
+	}, [isLoadingMore, searchTerm, state.page]);
+	//Previous Beers
+	useEffect(() => {
+		if (!isLoadingPrev) return;
 
-	return { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore };
+		fetchBeer(state.page > 1 ? state.page - 1 : state.page, searchTerm);
+		setIsLoadingPrev(false);
+	}, [isLoadingPrev, searchTerm, state.page]);
+
+	return {
+		state,
+		loading,
+		error,
+		searchTerm,
+		setSearchTerm,
+		setIsLoadingMore,
+		setIsLoadingPrev,
+	};
 };

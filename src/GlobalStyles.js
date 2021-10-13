@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
         --fontSmall: 1rem;
     }       
     *{
-        box-sizing: border-box:
+        box-sizing: border-box;
         font-family: 'Abel', sans-serif;
     }
     body{

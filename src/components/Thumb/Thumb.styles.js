@@ -7,21 +7,25 @@ export const Wrapper = styled.div`
 	background: var(--medGrey);
 	padding: 20px;
 	border-radius: 25px;
+	text-align: center;
 	align-content: center;
 	justify-content: center;
 
 	:hover {
 		opacity: 0.8;
 	}
+	@media screen and (max-width: 760px) {
+		margin: 0 auto;
+	}
 `;
 
 export const Image = styled.img`
-	/* width: 100%; */
+	width: 100%;
 	height: 300px;
 	max-width: 100px;
 	max-height: 300px;
 	transition: all 0.3s;
-	object-fit: cover;
+	object-fit: contain;
 	border-radius: 20px;
 	animation: animateThumb 0.5s;
 
@@ -34,17 +38,26 @@ export const Image = styled.img`
 		}
 	}
 `;
-export const Text = styled.p`
+export const Text = styled.div`
 	color: white;
+	width: 100%;
+	margin: auto;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.div`
 	color: white;
+	text-decoration: none;
+	text-align: center;
+	font-size: 26px;
 	width: 100%;
 	margin: 20px auto;
 `;
 export const About = styled.div`
 	display: grid;
 	grid-template-columns: 50% 50%;
-	grid-gap: 2rem;
+	margin: 20px auto;
+	justify-content: space-evenly;
+	justify-items: center;
+	align-items: center;
+	align-content: space-around;
 `;
