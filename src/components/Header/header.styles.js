@@ -21,6 +21,8 @@ export const Content = styled.div`
 		}
 		@media screen and (max-width: 768px) {
 			font-size: var(--fontSmall);
+			width: 100%;
+			text-align: center;
 		}
 	}
 
@@ -29,6 +31,8 @@ export const Content = styled.div`
 		color: whitesmoke;
 		@media screen and (max-width: 768px) {
 			font-size: var(--fontSmall);
+			width: 100%;
+			text-align: center;
 		}
 	}
 `;
