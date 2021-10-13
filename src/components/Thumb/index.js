@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Image, Wrapper, Text, Title, About } from './Thumb.styles';
 
 const Thumb = ({ image, beerId, name, description, abv, ibu }) => (
-	<Link to={`/${beerId}`}>
+	<Link style={{ textDecoration: 'none' }} to={`/${beerId}`}>
 		<Wrapper>
 			<Image
 				src={image}

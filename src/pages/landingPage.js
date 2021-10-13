@@ -26,6 +26,13 @@ const Home = () => {
 		setIsLoadingPrev,
 	} = useHomeFetch();
 
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	};
+
 	if (error)
 		return (
 			<div>
@@ -38,7 +45,7 @@ const Home = () => {
 	return (
 		<>
 			<SearchBar setSearchTerm={setSearchTerm} />
-			<Grid header={searchTerm ? 'Search Results' : 'Popular Beer'}>
+			<Grid header={searchTerm ? searchTerm : 'Page: ' + state.page}>
 				{state.results.map((beers) => (
 					<Thumb
 						key={beers.id}
@@ -53,10 +60,22 @@ const Home = () => {
 				))}
 			</Grid>
 			{loading && <Spinner />}
-			{!loading && (
+			{!loading && !searchTerm && (
 				<About>
-					<Button text='Previous' callback={() => setIsLoadingPrev(true)} />
-					<Button text='Next' callback={() => setIsLoadingMore(true)} />
+					<Button
+						text='Previous'
+						callback={() => {
+							setIsLoadingPrev(true);
+							scrollToTop();
+						}}
+					/>
+					<Button
+						text='Next'
+						callback={() => {
+							setIsLoadingMore(true);
+							scrollToTop();
+						}}
+					/>
 				</About>
 			)}
 		</>

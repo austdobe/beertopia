@@ -25,11 +25,15 @@ export const useHomeFetch = () => {
 			const beers = await API.fetchBeers(searchTerm, page);
 			console.log(beers);
 
-			setState(() => ({
-				...beers,
-				results: [...beers],
-				page: page || 0,
-			}));
+			const timer = setTimeout(() => {
+				setState(() => ({
+					...beers,
+					results: [...beers],
+					page: page || 0,
+				}));
+			}, 500);
+			setLoading(false);
+			return () => clearTimeout(timer);
 		} catch (error) {
 			setError(true);
 		}
