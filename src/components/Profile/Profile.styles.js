@@ -44,6 +44,10 @@ export const Content = styled.div`
 			align-content: center;
 			margin: 20px 20px;
 			padding-bottom: 20px;
+
+			@media screen and (max-width: 720px) {
+				margin: 20px 0px;
+			}
 		}
 
 		li {

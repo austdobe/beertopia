@@ -43,6 +43,10 @@ export const Text = styled.div`
 	background-color: var(--darkGrey);
 	opacity: 0.8;
 
+	@media screen and (max-width: 720px) {
+		width: 100%;
+	}
+
 	h1 {
 		font-size: var(--fontSuperBig);
 
