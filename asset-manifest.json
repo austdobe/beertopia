@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/beertopia/static/js/main.da200803.chunk.js",
-    "main.js.map": "/beertopia/static/js/main.da200803.chunk.js.map",
+    "main.js": "/beertopia/static/js/main.67641658.chunk.js",
+    "main.js.map": "/beertopia/static/js/main.67641658.chunk.js.map",
     "runtime-main.js": "/beertopia/static/js/runtime-main.65ad29ac.js",
     "runtime-main.js.map": "/beertopia/static/js/runtime-main.65ad29ac.js.map",
     "static/js/2.e8acf164.chunk.js": "/beertopia/static/js/2.e8acf164.chunk.js",
@@ -17,6 +17,6 @@
   "entrypoints": [
     "static/js/runtime-main.65ad29ac.js",
     "static/js/2.e8acf164.chunk.js",
-    "static/js/main.da200803.chunk.js"
+    "static/js/main.67641658.chunk.js"
   ]
 }
