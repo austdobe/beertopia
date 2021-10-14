@@ -28,7 +28,7 @@ const Beer = () => {
 	console.log('beer.js ' + beer[0].ingredients);
 	return (
 		<>
-			<BreadCrumb BeerTitle={beer[0].name} />
+			<BreadCrumb title='Back to search' BeerTitle={beer[0].name} />
 			<BeerInfo beer={beer[0]} />
 			<BeerInfoBar
 				ABV={beer[0].abv ? beer[0].abv : 'Not Provided'}
