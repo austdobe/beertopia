@@ -22,6 +22,7 @@ export const Content = styled.div`
 		@media screen and (max-width: 768px) {
 			font-size: var(--fontSmall);
 			text-align: center;
+			max-width: 150px;
 		}
 	}
 
@@ -31,6 +32,7 @@ export const Content = styled.div`
 		@media screen and (max-width: 768px) {
 			font-size: var(--fontSmall);
 			text-align: center;
+			max-width: 150px;
 		}
 	}
 `;
