@@ -1,6 +1,6 @@
 # Beertopia
 
-#### 'Beertopia' was created to give functional use of Punk API. It allows you to search through the database to find your favorite beers, or types of beer. It Provides information about what best food pairs with the flavors, it provides what ingredients(Hops, Malts, Yeast) is within it and it provides other basic information about the chosen beer.
+#### 'Beertopia' was created to give functional use of Punk API. It allows you to search through the database to find your favorite beers, or types of beer. It provides information about what best food pairs with the flavors and what ingredients (Hops, Malts, Yeast) are used.
 
 ## How it works:
 
