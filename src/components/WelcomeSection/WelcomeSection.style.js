@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 	background-size: 100%;
 	object-fit: contain;
 	background-position: center;
+	background-repeat: no-repeat;
 	height: 100vh;
 	position: relative;
 	animation: animateWelcomeImage 2s;
