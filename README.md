@@ -14,7 +14,7 @@
 
 #### 1. Clone repo into your code editor.
 
-#### 2. Open terminal within your workspace and run yarn start. The app should open within your default browser.'
+#### 2. Open terminal within your workspace and run yarn start. The app should open within your default browser.
 
 #### 3. Enjoy and leave me feedback. You can find me on Linkedin or check out my facebook page.
 
@@ -32,6 +32,15 @@ This project was created with:
 - Styled Components
 - JavaScript
 - JSX
+
+## Future Development Considerations:
+
+1. Add in more filter options, such as: ABV, IBU and Brewed Date.
+
+2. Build out a profile section to allow the user to save beer that they have searched for easier access.
+
+3. Build out an option to add additional beer to the API.
+	
 
 ## Deployed Site:
 
