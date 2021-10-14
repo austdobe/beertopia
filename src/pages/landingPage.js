@@ -1,4 +1,5 @@
 import React from 'react';
+import BreadCrumb from '../components/BreadCrumb';
 
 import Profile from '../components/Profile';
 import WelcomeSection from '../components/WelcomeSection';
@@ -10,9 +11,10 @@ const LandingPage = () => (
 		<WelcomeSection
 			id='welcome'
 			image={BeerWelcome}
-			title='Welcome to Beertopia'
-			text=''
+			title='Beertopia'
+			text=' Search through a beer catalog featuring hundreds of beer metrics and ingredients'
 		/>
+		<BreadCrumb title='See Beer Catalog' />
 		<Profile />
 	</>
 );

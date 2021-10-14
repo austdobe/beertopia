@@ -16,7 +16,7 @@ export const Content = styled.div`
 	max-width: var(--maxWidth);
 	width: 100%;
 	height: 55px;
-	background: var(--medGrey);
+	background: var(--lightGrey);
 	margin: 0 auto;
 	border-radius: 40px;
 	color: var(--white);
@@ -38,7 +38,7 @@ export const Content = styled.div`
 		width: 95%;
 		background: transparent;
 		height: 40px;
-		color: var(--white);
+		color: black;
 		:focus {
 			outline: none;
 		}

@@ -23,5 +23,9 @@ export const Content = styled.div`
 		@media screen and (max-width: 768px) {
 			font-size: var(--fontSmall);
 		}
+
+		:hover {
+			opacity: 0.8;
+		}
 	}
 `;

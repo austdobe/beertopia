@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 // style
 import { Wrapper, Content } from './BreadCrumb.styles';
 
-const BreadCrumb = ({ beerTitle }) => (
+const BreadCrumb = ({ title, beerTitle }) => (
 	<Wrapper>
 		<Content>
-			<Link to='/home'>
-				<span>Home</span>
+			<Link style={{ textDecoration: 'none' }} to='/home'>
+				<span>{title}</span>
 			</Link>
 			<span> | </span>
 			<span>{beerTitle}</span>

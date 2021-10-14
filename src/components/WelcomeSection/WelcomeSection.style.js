@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
 	object-fit: contain;
 	background-repeat: no-repeat;
 	height: 100vh;
+	text-align: center;
 	position: relative;
 	animation: animateWelcomeImage 2s;
 
@@ -26,18 +27,21 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-	padding: 0 10px;
-	max-width: var(--maxWidth);
-	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
 `;
 
 export const Text = styled.div`
 	z-index: 100;
-	max-width: 600px;
-	border-radius: 25%;
-	padding: 10px 10px;
-	min-height: 100px;
+	width: 50%;
+	border-radius: 25px;
+	padding: 10px 20px;
+	margin: 0 auto;
 	color: var(--white);
+	background-color: var(--darkGrey);
+	opacity: 0.8;
 
 	h1 {
 		font-size: var(--fontSuperBig);
