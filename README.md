@@ -4,7 +4,7 @@
 
 ## How it works:
 
-#### 1. Click through to the search bar and search a beer you would like to know more about. Whether it is a specific name, or if it is a specific type: IPA, ALE. ect.
+#### 1. Search for a beer you would like to know more about to filter the API results. Whether it is a specific name, or if it is a specific type: IPA, ALE, ect. Alternatively, you can search page by page.
 
 #### 2. There will be a call to the API which will pull in the closest matching beer options in the database.
 
