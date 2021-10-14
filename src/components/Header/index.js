@@ -9,7 +9,7 @@ const Header = () => (
 	<Wrapper>
 		<Content>
 			<Link style={{ textDecoration: 'none' }} to='/'>
-				<h1>Welcome to Beertopia</h1>
+				<h1>Beertopia</h1>
 			</Link>
 			<h2>Powered by Punk API</h2>
 		</Content>
